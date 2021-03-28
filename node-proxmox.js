@@ -10,7 +10,7 @@ module.exports = function ProxmoxApi(hostname, user, pve, password){
     function login(hostname, user, pve, password, callback)
 	{		
 		var querystring = require('querystring');
-		body = { password: password, username: user, realm: pve };
+		body = { password: password, username: user};
 		body = querystring.stringify(body);
 		var headers = {
 			'Content-Type':'application/x-www-form-urlencoded',
